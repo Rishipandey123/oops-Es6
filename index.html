@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+class student{
+    constructor(name,id,salary){
+        this.name =name;
+        this.id = id;
+        this.salary = salary
+    }
+    getDetails(){
+        console.log(`name ${this.name} id ${this.id} salary ${this.salary}`)
+    }
+    
+}
+class manager extends student{
+    constructor(name , id , salary , department){
+        super(name,id,salary);
+        this.department = department;
+
+    }
+    msg(){
+        super.getDetails()
+        console.log(`department ${this.department}`);
+    }
+}
+let student2 = new manager("rishi", 123, 12000, "developer");
+let student3 = new student("rahul", 142, 12550)
+console.log(student2)
+student3.getDetails();
+student2.msg();
+    </script>
+    
+</body>
+</html>
